@@ -1,0 +1,488 @@
+@font-face {
+    font-family: "GBold";
+    src: url("../fonts/gilroy-extrabold-webfont.woff2") format("woff2"),
+        url("../fonts/gilroy-extrabold-webfont.woff") format("woff");
+    font-weight: 1000;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GMedium";
+    src: url("../fonts/Gilroy-Medium.woff2") format("woff2"),
+        url("../fonts/Gilroy-Medium.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Medium.woff2") format("woff2"),
+        url("../fonts/Gilroy-Medium.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Bold.woff2") format("woff2"),
+        url("../fonts/Gilroy-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"),
+        url("../fonts/Gilroy-Heavy.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Regular.woff2") format("woff2"),
+        url("../fonts/Gilroy-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Light.woff2") format("woff2"),
+        url("../fonts/Gilroy-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SiyamRupali";
+    src: url("../fonts/SiyamRupali.woff2") format("woff2"),
+        url("../fonts/SiyamRupali.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Gilroy", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "GBold" !important;
+}
+
+b {
+    font-weight: bold;
+}
+
+.nav-footer-icon-div {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-footer-icon-div {
+        position: fixed;
+        display: block;
+        bottom: 60px;
+        align-content: flex-end;
+        width: 100%;
+        padding: 20px;
+        padding-left: 0px;
+        display: block;
+    }
+}
+
+h1 {
+    font-weight: bold;
+    font-style: normal;
+}
+
+b {
+    font-family: "Gilroy";
+    font-weight: bold;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    color: black;
+    font-family: "Gilroy", sans-serif;
+    font-weight: bold;
+    z-index: 900;
+}
+
+.nav-links {
+    width: 35%;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 0px; /* Otherwise automatic css with bottom margin will be applied */
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nav-footer-icon-div .footer-icon {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 20px;
+    height: 2px;
+    background-color: #3cc6fa;
+    margin: 5px;
+}
+
+@media screen and (max-width: 1350px) and (min-width: 1024px) {
+    .nav-links {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .nav-links {
+        width: 40%;
+    }
+}
+
+.mobile-footer-icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .hamburger.toggle {
+        position: fixed;
+        right: 0px;
+        padding-right: 20px;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        height: 100vh;
+        top: 0vh;
+        padding-top: 6vh;
+        background-color: #3cc6fa;
+        display: none;
+        flex-direction: column;
+        padding-left: 20px;
+        justify-content: flex-start;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 100;
+    }
+
+    .nav-links li {
+        padding-top: 35px;
+    }
+
+    .nav-links a {
+        color: white;
+        font-weight: bold;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 999;
+    }
+
+    .mobile-footer-icon {
+        display: inline-block;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-7px, 6px);
+        background-color: white;
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+        background-color: white;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -4px);
+        background-color: white;
+    }
+}
+
+/* .row {
+    display: flex;
+    justify-content: space-between;
+} wtf? */
+
+.icons {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    height: 40vh;
+}
+
+.bottomlogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 50px;
+    bottom: 100px;
+}
+
+.bottom-logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    align-items: center;
+    position: relative;
+    max-width: 80%;
+}
+
+hr {
+    border-top: 1px solid lightgray;
+    border-bottom: white;
+    border-right: white;
+    border-left: white;
+    width: 84%;
+    margin: auto;
+}
+
+.links-div {
+    text-align: left;
+    padding: 20px;
+}
+
+.links-div ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.links-div li {
+    padding: 7px;
+    padding-left: 0px;
+    font-size: 12px;
+}
+
+.links-div li a {
+    color: black;
+    text-decoration: none;
+}
+
+footer {
+    padding: 20px;
+    font-size: 12px;
+    line-height: 2;
+    text-align: center;
+}
+
+.banner-div {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.banner-text {
+    padding: 10px;
+    padding-top: 50px;
+}
+
+.banner-text h1 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "GBold";
+}
+
+.banner-text h3 {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Gilroy", sans-serif;
+}
+
+.banner-subtext {
+    padding: 10px;
+}
+
+.footer-icon-div {
+    width: 100%;
+    padding: 20px;
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+.line-break {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .body {
+        overflow-x: hidden;
+    }
+
+    /* .row {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+  } wtf? */
+
+    .icons {
+        width: 80%;
+        margin: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .bottom-logo {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 100%;
+    }
+
+    .contact {
+        height: 25vh;
+        background-color: #3cc6fa;
+        padding-top: 7vh;
+        text-align: center;
+        color: white;
+    }
+
+    .links-div {
+        text-align: left;
+        padding: 20px;
+    }
+
+    .links-div ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links-div li {
+        padding: 7px;
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 20px;
+        line-height: 2;
+        text-align: left;
+    }
+
+    .banner-div {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .banner-text {
+        padding: 10px;
+    }
+
+    .banner-text h2 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .banner-text h3 {
+        font-size: 20px;
+    }
+
+    .banner-subtext {
+        padding: 10px;
+    }
+
+    .quote h1 {
+        max-width: 20ch;
+        text-align: center;
+        margin: auto;
+    }
+
+    .line-break {
+        display: block;
+    }
+
+    .footer-icon {
+        padding: 0px;
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .bangla {
+        font-family: "SiyamRupali" !important;
+    }
+
+    .bottomlogo {
+        width: 400px;
+    }
+
+    .links-div ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

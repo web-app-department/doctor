@@ -1,0 +1,129 @@
+
+
+/*Post Slider */
+
+.search-post-wrapper {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    overflow-x: hidden;
+    padding: 10px 0px 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-post {
+    cursor:pointer;
+    display: inline-block;
+    width: 300px;
+    margin: 10px 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 9px -3px rgba(99, 99, 99, 0.45);
+}
+
+.search-cta-btn{
+    color:#3cc6fa;
+    background-color: transparent;
+    width:20%;
+    border:none
+}
+
+.search-doctor-image-container{
+    width:20%;
+    margin-top:15px;
+    margin-left:10px;
+    margin-bottom: 15px;
+}
+
+.search-doctor-image{
+    height:100%;
+    width:100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.search-slider-image {
+    max-width: 100%;
+    max-height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.search-post-info {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 15px 10px 20px;
+    flex:1;
+    align-self:flex-end;
+}
+
+
+.search-speciality {
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:#3cc6fa;
+}
+
+
+.search-post-name {
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+
+.search-work {
+    font-size: 10px;
+}
+
+.search-qualifications {
+    font-size: 10px;
+}
+
+.search-qualifications b{
+    font-weight: bold;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .search-post-wrapper {
+        width: 100%;
+    }
+
+    .search-speciality{
+        font-size: 14px;
+    }
+
+    .search-post {
+        width: 100%;
+        margin: 0px 0px 10px;
+        padding: 0px;
+    }
+
+    .search-chamber{
+        margin-top:10px;
+        font-size:12px;
+        display:block;
+    }
+    .search-work {
+        font-size: 9px;
+    }
+
+    .search-qualifications {
+        font-size: 9px;
+        margin-top:10px;
+    }
+
+    .search-post-name{
+        font-size: 12px;
+    }
+}

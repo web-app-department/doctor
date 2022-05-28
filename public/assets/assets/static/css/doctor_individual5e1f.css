@@ -1,0 +1,277 @@
+.gender-container{
+  display:flex;
+  flex-direction:column;
+  align-content: center;
+  margin-top:20px;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.gender-container p{
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  line-height:60px;
+}
+
+.doctor-appointment input[type="radio"]
+{
+  width: 20px;
+  text-align: right;
+  vertical-align: middle;
+  margin-top: 0px;
+  height: 30px;
+  margin-right: 10px;
+
+}
+
+
+
+nav {
+  background-color: white;
+  color: black;
+  border-bottom:1px solid lightgray;
+}
+
+.nav-links a {
+  color: black;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #3cc6fa;
+  margin: 5px;
+}
+
+.post {
+  height: auto;
+}
+
+.doctor-profile-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+#doctor-individual {
+  width: 40%;
+  margin-top: 5%;
+}
+
+#doctor-appointment-form {
+  width: 40%;
+  margin-top: 5%;
+}
+
+.doctor-appointment {
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+  padding-top: 0px;
+}
+
+.doctor-form-title {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 20px;
+  font-family: "GBold";
+}
+
+.doctor-hours {
+  font-size: 12px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+hr {
+  width: 100%;
+}
+
+.doctor-closed {
+  color: #3cc6fa;
+  font-size: 12px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.doctor-appointment h5 {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  padding-top: 0px;
+  padding-left:0px;
+}
+
+.doctor-appointment textarea {
+  font-weight: 300;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  outline: none;
+}
+
+.doctor-appointment input {
+  font-weight: 300;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  outline: none;
+  height: 6vh;
+}
+
+
+textarea:focus {
+  border: 1px solid #3cc6fa;
+}
+
+input:focus {
+  border: 1px solid #3cc6fa;
+}
+
+
+#apply_promo_btn {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #3cc6fa;
+  border: none;
+  width: 100px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submit {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #3cc6fa;
+  border: none;
+  width: 200px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.doctor-fee {
+  margin: auto;
+  padding: 0px;
+  width: 60%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+footer {
+  line-height: 2;
+}
+
+.nav-links a {
+  font-size: 13px;
+}
+
+.speciality {
+  color: #3cc6fa;
+  font-weight: bold;
+  font-family: "Gilroy", sans-serif;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .doctor-profile-container {
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    flex-direction: column;
+  }
+
+  #doctor-individual {
+    width: 100%;
+    margin: 0px;
+  }
+
+  #doctor-appointment-form {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .nav-links li {
+    padding-top: 20px;
+  }
+
+  .nav-links a {
+    color: white;
+  }
+
+  .doctor-pc-image {
+    display: none;
+  }
+
+  .doctor-details {
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+    padding-top: 20px;
+  }
+
+  .doctor-fee {
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .doctor-appointment {
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+    margin: 0px;
+  }
+
+  .doctor-appointment textarea {
+    width: 100%;
+  }
+
+  .doctor-appointment input {
+    width: 100%;
+  }
+
+  .submit {
+    width: 90%;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+.availability-today-div{
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+.badge {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right:10px;
+  margin-top:8px;
+  background-color: #1DC468;
+}

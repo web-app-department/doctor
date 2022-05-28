@@ -1,0 +1,389 @@
+{{-- <div
+class=header-topline-wrapper>
+<div
+   class=container>
+   <div
+      class=row>
+      <div
+         class=col-md-12>
+         @foreach($toppost as $post)
+         <div
+            class=header-topline>
+            <div
+               class=header-topline-content>
+               <sup>NEW!</sup>{{$post->title}} <a
+                  href={{route('postview',$post->slug)}}>Read More <i
+                  class="fa fa-angle-right" aria-hidden=true></i>
+               </a>
+            </div>
+         </div>
+         @endforeach
+      </div>
+   </div>
+</div>
+</div>
+<div
+class="header-menu-bg menu_black menu_border_boxed header-menu-none header-menu-social-icons-left" role=navigation>
+<div
+   class=header-menu>
+   <div
+      class=container>
+      <div
+         class=row>
+         <div
+            class=col-md-12>
+            <div
+               class=menu-top-menu-container-toggle>
+               <i
+                  class="fa fa-user" aria-hidden=true></i>
+            </div>
+            <div
+               class=menu-top-menu-container>
+               <ul
+                  id=menu-top-menu-1 class=links>
+                  <li
+                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a
+                     href="{{ route('home') }}" >Home</a></li>
+                  <li
+                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-762"><a
+                     href="{{ route('post.index') }}">Post</a></li>
+               
+                
+
+                     @guest
+                    
+                         
+        
+                  <li
+                     class="icon-signup lrm-register lrm-hide-if-logged-in pull-right last-element menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a
+                     href=#register>Register</a></li>
+                  <li
+                     class="icon-signin lrm-login lrm-hide-if-logged-in pull-right menu-item menu-item-type-custom menu-item-object-custom menu-item-951"><a
+                     href=#login>Login</a></li>
+                  
+                     @else
+                     @if(Auth::user()->role->id == 1)
+                     <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                 @endif
+                 @if(Auth::user()->role->id == 2)
+                     <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="{{ route('author.dashboard') }}">Dashboard</a></li>
+                 @endif
+                  <li
+                     class="icon-signup lrm-register lrm-hide-if-logged-in pull-right last-element menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a
+                     href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a>
+                                                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                        @csrf
+                                                    </form>
+                    </li>
+                     @endguest
+
+
+
+<li class="lrm-register lrm-hide-if-logged-in pull-right last-element menu-item menu-item-type-custom menu-item-object-custom menu-item-390icon-signup lrm-register lrm-hide-if-logged-in pull-right last-element menu-item menu-item-type-custom menu-item-object-custom menu-item-390"> <div
+            class="social-icons-wrapper no-description"><a
+                href=https://twitter.com/magniumthemes target=_blank class="a-facebook no-description"><i
+                    class="fa fa-facebook"></i></a><a
+                href=https://twitter.com/magniumthemes target=_blank class="a-twitter no-description"><i
+                    class="fa fa-twitter"></i></a><a
+                href=https://twitter.com/magniumthemes target=_blank class="a-instagram no-description"><i
+                    class="fa fa-instagram"></i></a><a
+                href=# target=_blank class="a-youtube no-description"><i
+                    class="fa fa-youtube"></i></a></div></li>
+
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<header
+class="main-header clearfix header-layout-menu-below-header-center-border sticky-header mainmenu-light">
+<div
+   class=blog-post-reading-progress></div>
+<div
+   class=container>
+   <div
+      class=row>
+      <div
+         class=col-md-12>
+         <div
+            class=header-left>
+            <div
+                    class=logo>
+               <a
+                       class=logo-link href="{{route('home')}}" ><img style="width:185px; vertical-align: middle; "
+                                                                      src="{{asset('assets/')}}/logo.png" alt=W3asolution class=regular-logo></a>
+            </div>
+         </div>
+         <div
+            class=header-center>
+            <div
+               class=mainmenu-mobile-toggle><i
+               class="fa fa-bars" aria-hidden=true></i></div>
+
+         </div>
+         <div
+         class=header-right>
+         <div
+            class="search-toggle-wrapper search-header">
+            <a
+               class=search-toggle-btn aria-label="Search toggle"><i
+               class="fa fa-search" aria-hidden=true></i></a>
+            <div
+               class=header-center-search-form>
+               <form
+                  method=get role=search class=searchform action="{{ route('search') }}" >
+                  <input
+                     type=search aria-label=Search class=field value="{{ isset($query) ? $query : '' }}" name="query" type="text" placeholder="Type keyword(s) here&hellip;"><input
+                     type=submit class="submit btn" value=Search>
+               </form>
+
+            </div>
+         </div>
+
+      </div>
+      </div>
+   </div>
+   <div
+      class="mainmenu mainmenu-light mainmenu-center mainmenu-none mainmenu-regularfont mainmenu-downarrow clearfix" role=navigation>
+      <div
+         id=navbar class="navbar navbar-default clearfix mgt-mega-menu">
+         <div
+            class=navbar-inner>
+            <div
+               class=container>
+               <div
+                  class="navbar-toggle btn" data-toggle=collapse data-target=.collapse>
+                  Menu
+               </div>
+               <div
+                  class=navbar-center-wrapper>
+                  <div
+                     class="navbar-collapse collapse">
+                     <ul
+                        id=menu-main-menu-2 class=nav>
+                        <li
+                        id=mgt-menu-item-701 class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                        href="{{ route('home') }}">Home</a></li>
+
+                        @foreach($menu as $category)
+                        <li
+                           id=mgt-menu-item-102 class="menu-item menu-item-type-custom menu-item-object-custom ">
+                           <a
+
+                              href="{{ route('category.posts',$category->slug) }}">{{ $category->name }}</a>
+
+                        </li>
+
+                        @endforeach
+
+                        <li
+                                id=mgt-menu-item-103 class="menu-item menu-item-type-taxonomy menu-item-object-category mgt-menu-fullwidth-inside menu-item-multicolumn menu-item-has-children"><a
+                                   href="#" >Online Income <sup
+                                      data-style="background-color: #ea3465">HOT</sup></a>
+                           <ul
+                                   class="sub-menu sidebar sidebar-inside  megamenu-column-1 mgt-menu-fullwidth level-0" >
+                              <li
+                                      id=inhype-list-posts-5 class="widget widget_inhype_list_entries">
+                                 <h2 class="widgettitle">Check this posts</h2>
+                                 <ul
+                                         class=template-grid-short-inside>
+
+                                    @foreach($menupost->posts as $post)
+                                    <li
+                                            class=template-grid-short>
+                                       <div
+                                               class="inhype-grid-post inhype-grid-short-post inhype-post format-standard">
+                                          <div
+                                                  class=inhype-post-image-wrapper>
+                                             <a
+                                                     href="{{route('postview',$post->slug)}}" >
+                                                <div
+                                                        class=inhype-post-image data-style="background-image: url({{url('storage/post/'.$post->image)}});"></div>
+                                             </a>
+                                          </div>
+                                          <div
+                                                  class=inhype-post-details>
+
+                                             <h3 class="post-title entry-title"><a
+                                                        href="{{route('postview',$post->slug)}}" >{{$post->title}}</a></h3>
+                                             <div
+                                                     class=post-date><time
+                                                        class="entry-date published updated" datetime=2019-12-10T09:23:00+00:00>{{ $post->created_at->diffForHumans() }}</time></div>
+                                             <div
+                                                     class=post-info-dot></div>
+                                             <div
+                                                     class=post-read-time>View &nbsp;  {{$post->view_count}} </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    @endforeach
+
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+
+                        @guest
+
+
+
+
+                           <li
+                                   class="icon-signin lrm-login lrm-hide-if-logged-in pull-right menu-item menu-item-type-custom menu-item-object-custom menu-item-951"><a
+                                      href=#login>Login</a></li>
+
+                        @else
+                           @if(Auth::user()->role->id == 1)
+                              <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                           @endif
+                           @if(Auth::user()->role->id == 2)
+                              <li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="{{ route('author.dashboard') }}">Dashboard</a></li>
+                           @endif
+                           <li
+                                   class="icon-signup lrm-register lrm-hide-if-logged-in pull-right last-element menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a
+                                      href="{{ route('logout') }}"
+                                      onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a>
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                 @csrf
+                              </form>
+                           </li>
+                        @endguest
+
+
+
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</header> --}}
+
+
+<header class="header header-default site-header  overflow-hidden">
+   <div class="header__outer">
+       <div class="header__inner header--fixed">
+           <div class="container">
+               <div class="header__main">
+                   <div class="header__col header__left" style="width:0%">
+                       <a href="index.html" class="logo">
+                           <figure class="logo--normal">
+                               <img src="{{asset('assets/assets/static')}}/img/logo.png" alt="Logo">
+                           </figure>
+                           <figure class="logo--transparency">
+                               <img src="{{asset('assets/assets/static')}}/img/logo.png" alt="Logo">
+                           </figure>
+                       </a>
+                   </div>
+                   <div class="header__col header__center">
+                       <nav class="main-navigation d-none d-lg-block" style="border-bottom:none !important;">
+                           <ul class="mainmenu">
+                               <li class="mainmenu__item menu-item-has-children position-relative">
+                                   <a href="#" class="menuList">Home</a>
+                                   
+                               </li>
+                               <li class="mainmenu__item menu-item-has-children position-static">
+                                   <a href="doctor/alldoctors.html" target="_blank" class="menuList">Doctor</a>
+                                   
+                               </li>
+                               <li class="mainmenu__item menu-item-has-children position-relative">
+                                   <a href="blog/index.html"  target="_blank"  class="menuList">Blog</a>
+                                  
+                               </li>
+                               <li class="mainmenu__item menu-item-has-children position-relative">
+                                   <a href="job/alljob.html"  target="_blank"  class="menuList">Jobs</a>
+                                   
+                               </li>
+                               
+                           </ul>
+                       </nav>
+                   </div>
+               <div class="header__col header__right" style="overflow: hidden;height: 34px;">
+
+            @guest
+            <li
+            class="toolbar-item d-none d-lg-block icon-signup lrm-register lrm-hide-if-logged-in pull-right last-element menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a
+            href=#register>Register</a></li>
+            <li
+            class="toolbar-item d-none d-lg-block icon-signin lrm-login lrm-hide-if-logged-in pull-right menu-item menu-item-type-custom menu-item-object-custom menu-item-951"><a
+            href=#login>Login</a></li>
+            @else
+            @if(Auth::user()->role->id == 1)
+            <li  class="toolbar-item d-none d-lg-block menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+            @endif
+            @if(Auth::user()->role->id == 2)
+            <li  class="toolbar-item d-none d-lg-block menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="{{ route('author.dashboard') }}">Dashboard</a></li>
+            @endif
+            @if(Auth::user()->role->id == 3)
+            <li  class="toolbar-item d-none d-lg-block menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="{{ route('doctor.dashboard') }}">Dashboard</a></li>
+            @endif
+            <li
+            class="toolbar-item d-none d-lg-block  pull-right last-element menu-item menu-item-type-custom menu-item-object-custom menu-item-390">
+            <a
+               href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+               document.getElementById('logout-form').submit();">Logout</a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+               @csrf
+            </form>
+            </li>
+            @endguest
+
+
+                       <div class="toolbar-item d-block d-lg-none" style="height: 35px;">
+                           <a href="#offcanvasnav" class="hamburger-icon js-toolbar menu-btn">
+                               <span></span>
+                               <span></span>
+                               <span></span>
+                               <span></span>
+                               <span></span>
+                               <span></span>
+                           </a>
+                       </div>
+                     
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="header-sticky-height"></div>
+   </div>
+</header>
+<!-- Header End -->
+<!-- OffCanvas Menu Start -->
+<aside class="offcanvas-navigation" id="offcanvasnav">
+   <div class="offcanvas-navigation__inner">
+       <a href="#" class="btn-close">
+       </a>
+       <div class="offcanvas-navigation__top">
+           <ul class="offcanvas-menu">
+               <li class="has-children">
+                   <a href="#">
+                       <span class="mm-text">Home</span>
+                   </a>
+                   <ul class="sub-menu">
+                       <li class="has-children">
+                           <a href="index.html">
+                               <span class="mm-text">Home One</span>
+                           </a>
+                       </li>
+                       <li class="has-children">
+                           <a href="index-02.html">
+                               <span class="mm-text">Home Two</span>
+                           </a>
+                       </li>
+                   </ul>
+               </li>
+            
+             
+           </ul>
+       </div>
+   </div>
+</aside>
+<!-- OffCanvas Menu End -->

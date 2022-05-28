@@ -1,0 +1,228 @@
+nav {
+  background-color: white;
+  color: black;
+  border-bottom:1px solid lightgray;
+}
+
+.nav-links a {
+  color: black;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #3cc6fa;
+  margin: 5px;
+}
+
+.doctor-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-inputs {
+  width: 40%;
+  margin: 5%;
+}
+
+.photo-input {
+  width: 40%;
+  margin: 5%;
+}
+
+.image-upload {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #3CC6FA;
+  padding: 15px 32px;
+  width:100%;
+  color:#3CC6FA;
+}
+
+.image-upload h6{
+  margin: 0px;
+  padding-left:5px;
+  font-size: 16px;
+  font-weight:bold;
+  text-align: left;
+  line-height: 20px;
+}
+
+.image-upload img{
+  width:20px;
+  height:20px;
+  padding-bottom:3px;
+
+}
+
+.photo-container h3 {
+  text-align: left;
+}
+.photo-container p {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 0px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.6;
+  width: 70%;
+}
+
+hr {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.title {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title h5 {
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-family: "GBold";
+}
+
+.title p {
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  line-height: 1.6;
+}
+
+.doctor-information {
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+}
+
+.doctor-form-title {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 20px;
+  font-family: "GBold";
+}
+
+.example-photo {
+  width: 200px;
+}
+
+.doctor-information textarea {
+  font-weight: 300;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  outline: none;
+}
+
+.doctor-information input {
+  font-weight: 300;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4;
+  outline: none;
+  height: 45px;
+}
+
+textarea:focus {
+  border: 1px solid #3cc6fa;
+}
+
+input:focus {
+  border: 1px solid #3cc6fa;
+}
+
+.button-container {
+  width: 100%;
+  text-align: left;
+  margin-left: 5%;
+}
+
+.submit {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  margin: auto;
+  background-color: #3cc6fa;
+  border: none;
+  width: 200px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links li {
+    padding-top: 20px;
+  }
+
+  .nav-links a {
+    color: white;
+  }
+
+  .doctor-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-inputs {
+    width: 100%;
+    margin: auto;
+  }
+
+  .photo-input {
+    width: 90%;
+    margin: auto;
+  }
+
+  .photo-container {
+    padding-top: 40px;
+  }
+
+  .doctor-information {
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .doctor-information textarea {
+    width: 90%;
+  }
+
+  .doctor-information input {
+    width: 90%;
+  }
+
+  .submit {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    font-weight: bold;
+    display: block;
+  }
+
+  .button-container {
+    margin: 0px;
+    text-align:center;
+  }
+
+  .example-photo {
+    width: 100%;
+  }
+}
